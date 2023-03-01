@@ -21,19 +21,26 @@
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/navigation.php' ?>
     </nav>
     <main>
-        <h1>Log In</h1>
+        <h1>Registeration</h1>
         <form method="post" action="/orderForm/accounts/">
             <?php
-            // if (isset($_SESSION['message'])) {
-            //     echo $_SESSION['message'];
-            // }
             if (isset($message)) {
                 echo $message;
             }
             ?>
+            <label for="clientFirstName">First Name</label>
+            <input type="text" name="clientFirstname" id="clientFirstname" <?php if (isset($clientFirstname)) {
+                                                                                echo "value='$clientFirstname?'";
+                                                                            } ?> required>
+
+            <label for="clientLastName">Last Name</label>
+            <input type="text" name="clientLastname" id="clientLastname" <?php if (isset($clientLastname)) {
+                                                                                echo "value='$clientLastname?'";
+                                                                            } ?> required>
+
             <label for="clientEmail">Email address</label>
             <input type="email" name="clientEmail" id="clientEmail" <?php if (isset($clientEmail)) {
-                                                                        echo "value='$clientEmail'";
+                                                                        echo "value='$clientEmail?'";
                                                                     } ?> required>
 
             <span class="form-warning red">Password requirements:
@@ -45,15 +52,10 @@
             <label for="clientPassword">Password</label>
             <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
-            <input type="submit" id="login" class="form-button" name="login" value="Log In">
+            <input type="submit" name="submit" class="form-button" id="register" value="Register">
 
             <!-- Add the action name - value pair -->
-            <input type="hidden" name="action" value="login">
-
-            <div id="sign-up">
-                <h2>No Account?</h2>
-                <a href="/orderForm/accounts/?action=register-view">Sign-up</a>
-            </div>
+            <input type="hidden" name="action" value="register">
         </form>
     </main>
     <footer>

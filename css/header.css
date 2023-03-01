@@ -20,6 +20,11 @@ header div {
     align-items: center;
 }
 
+.logo {
+    display: block;
+    height: 100%;
+}
+
 #my-account {
     grid-row: 1/3;
 }

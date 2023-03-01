@@ -8,7 +8,7 @@ function orderFormConnect()
 {
     $server = 'localhost:3308';
     $dbname = 'orderform';
-    $username = 'iClient';
+    $username = 'formClient';
     $password = 'FJB9AQPZERIH.l0N';
     $dsn = "mysql:host=$server;dbname=$dbname";
     $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);

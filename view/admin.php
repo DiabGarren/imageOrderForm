@@ -1,3 +1,15 @@
+<?php
+if (!$_SESSION['loggedin']) {
+    header('Location: /orderForm/');
+}
+$welcome = "Welcome " . $_SESSION['clientData']['clientFirstName'] . " " . $_SESSION['clientData']['clientLastName'];
+$dataList = "<ul>
+        <li>First name: " . $_SESSION['clientData']['clientFirstName'] . "</li>
+        <li>Last name: " . $_SESSION['clientData']['clientLastName'] . "</li>
+        <li>Email: " . $_SESSION['clientData']['clientEmail'] . "</li>
+        <li>Level: " . $_SESSION['clientData']['clientLevel'] . "</li>
+        </ul>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +32,9 @@
     <nav>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/navigation.php' ?>
     </nav>
-    <main class="grid">
-        <h1>Welcome to the Image Order Form!</h1>
+    <main id="admin-view">
+        <h1><?php echo $welcome; ?></h1>
+        <?php echo $dataList; ?>
     </main>
     <footer>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/footer.php' ?>

@@ -57,7 +57,7 @@ CREATE TABLE `clients` (
 -- Dumping data for table `clients`
 --
 INSERT INTO `clients` (`clientId`, `clientFirstname`, `clientLastname`, `clientEmail`, `clientPassword`, `clientLevel`) 
-VALUES (1, 'Admin', 'User', 'admin@orders.com', 'Sup3rU$er', '3');
+VALUES (1, 'Admin', 'User', 'admin@orders.com', '$2y$10$wrqkbCWG57sOe9Aybvxk2eeVeHDv7RmlvThNA1qW8Zas.DyeDPkXu', '3');
 --
 -- Indexes for table `clients`
 --
