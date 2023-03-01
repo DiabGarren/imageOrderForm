@@ -9,6 +9,9 @@ $dataList = "<ul>
         <li>Email: " . $_SESSION['clientData']['clientEmail'] . "</li>
         <li>Level: " . $_SESSION['clientData']['clientLevel'] . "</li>
         </ul>";
+if ($_SESSION['clientData']['clientLevel'] > 1) {
+    $formLink = '<a class="order-form-btn" href="/orderForm/orders/">Image Order Form</a>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +37,7 @@ $dataList = "<ul>
     </nav>
     <main id="admin-view">
         <h1><?php echo $welcome; ?></h1>
-        <?php echo $dataList; ?>
+        <?php echo $dataList . $formLink; ?>
     </main>
     <footer>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/footer.php' ?>

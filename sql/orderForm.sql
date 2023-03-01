@@ -25,11 +25,15 @@ CREATE TABLE `orders` (
   `orderFirstname` varchar(30) NOT NULL,
   `orderLastname` varchar(30) NOT NULL,
   `orderPhone` varchar(10) NOT NULL,
-  `orderPrint` smallint NOT NULL,
-  `orderDigital` smallint NOT NULL,
-  `orderAmount` smallint NOT NULL,
-  `orderImages` text NOT NULL
+  `orderPrint` text NOT NULL,
+  `orderDigital` text NOT NULL,
+  `orderAmount` smallint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Dumping data for table `orders`
+--
+INSERT INTO `orders` (`orderId`, `orderFirstname`, `orderLastname`, `orderPhone`, `orderPrint`, `orderDigital`, `orderAmount`) 
+VALUES (1, 'Garren', 'Diab', '0609811694', 'IMG_001,IMG_002', '', 20);
 --
 -- Indexes for table `inventory`
 --
@@ -39,7 +43,7 @@ ADD PRIMARY KEY (`orderId`);
 -- AUTO_INCREMENT for table `inventory`
 --
 ALTER TABLE `orders`
-MODIFY `orderId` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+MODIFY `orderId` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Table structure for table `clients`
 --

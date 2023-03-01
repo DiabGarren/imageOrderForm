@@ -22,10 +22,12 @@
     </nav>
     <main>
         <h1>Content Title Here</h1>
+        <table id="ordersDisplay"></table>
     </main>
     <footer>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/footer.php' ?>
     </footer>
+    <script src="../js/orders.js"></script>
 </body>
 
 </html>
