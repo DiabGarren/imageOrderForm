@@ -1,0 +1,18 @@
+#vehicle-paragraph {
+    margin: 0 .5rem;
+}
+
+#vehicle-paragraph a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 750px) {
+    #admin-view {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #admin-view ul {
+        grid-column: 1;
+    }
+}
