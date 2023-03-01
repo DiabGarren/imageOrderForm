@@ -33,10 +33,10 @@ function checkClassification($classificationName, $classifications)
 function buildNav($classifications)
 {
     $navList = '<ul>';
-    $navList .= "<li><a href='/phpmotors/' title='View the PHP Motors home page'>Home</a></li>";
+    $navList .= "<li><a href='/orderForm/' title='View the PHP Motors home page'>Home</a></li>";
     $navList .= '<li id="vehicle-list"><a href="#" title="View our list of vehicles">Vehicles</a><ul>';
     foreach ($classifications as $classification) {
-        $navList .= "<li><a href='/phpmotors/?action=" . urlencode($classification['classificationName']) . "
+        $navList .= "<li><a href='/orderForm/?action=" . urlencode($classification['classificationName']) . "
             ' title='View our $classification[classificationName] product line'>$classification[classificationName]</a>
             </li>";
     }
@@ -58,7 +58,7 @@ function buildClassificationList($classifications)
 
 function getInventoryByClassification($classificationId)
 {
-    $db = phpmotorsConnect();
+    $db = orderFormConnect();
     $sql = ' SELECT * FROM inventory WHERE classificationId = :classificationId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':classificationId', $classificationId, PDO::PARAM_INT);

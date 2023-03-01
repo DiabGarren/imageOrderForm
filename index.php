@@ -11,9 +11,9 @@ require_once 'library/connections.php';
 require_once 'model/main-model.php';
 require_once 'library/functions.php';
 
-$classifications = getClassifications();
+// $classifications = getClassifications();
 
-$navList = buildNav($classifications);
+// $navList = buildNav($classifications);
 
 $action = trim(filter_input(INPUT_POST, 'action', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 if ($action == NULL) {

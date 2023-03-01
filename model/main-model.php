@@ -1,17 +1,17 @@
 <?php
 
 /*
- * Main PHPMotors Model
+ * Main orderForm Model
  */
 function getClassifications()
 {
-    // Create a connection object from the phpmotors connection function
-    $db = phpmotorsConnect();
+    // Create a connection object from the orderForm connection function
+    $db = orderFormConnect();
 
     // The SQL statement to be used with the database
     $sql = 'SELECT classificationName, classificationId FROM carclassification ORDER BY classificationName ASC';
 
-    // The next line creates the prepared statement using the phpmotors connection
+    // The next line creates the prepared statement using the orderForm connection
     $stmt = $db->prepare($sql);
 
     // The next line runs the prepared statement

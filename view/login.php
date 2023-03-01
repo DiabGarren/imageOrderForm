@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/phpmotors/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/orderForm/css/main.css">
     <style media="screen"></style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,14 @@
 
 <body>
     <header>
-        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php' ?>
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/header.php' ?>
     </header>
     <nav>
         <?php echo $navList; ?>
     </nav>
     <main>
         <h1>Log In</h1>
-        <form method="post" action="/phpmotors/accounts/">
+        <form method="post" action="/orderForm/accounts/">
             <?php
             // if (isset($_SESSION['message'])) {
             //     echo $_SESSION['message'];
@@ -52,12 +52,12 @@
 
             <div id="sign-up">
                 <h2>No Account?</h2>
-                <a href="/phpmotors/accounts/?action=register-view">Sign-up</a>
+                <a href="/orderForm/accounts/?action=register-view">Sign-up</a>
             </div>
         </form>
     </main>
     <footer>
-        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php' ?>
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/footer.php' ?>
     </footer>
 </body>
 
