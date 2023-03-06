@@ -2,10 +2,10 @@
 if (!$_SESSION['loggedin']) {
     header('Location: /orderForm/');
 }
-$welcome = "Welcome " . $_SESSION['clientData']['clientFirstName'] . " " . $_SESSION['clientData']['clientLastName'];
+$welcome = "Welcome " . $_SESSION['clientData']['clientFirstname'] . " " . $_SESSION['clientData']['clientLastname'];
 $dataList = "<ul>
-        <li>First name: " . $_SESSION['clientData']['clientFirstName'] . "</li>
-        <li>Last name: " . $_SESSION['clientData']['clientLastName'] . "</li>
+        <li>First name: " . $_SESSION['clientData']['clientFirstname'] . "</li>
+        <li>Last name: " . $_SESSION['clientData']['clientLastname'] . "</li>
         <li>Email: " . $_SESSION['clientData']['clientEmail'] . "</li>
         <li>Level: " . $_SESSION['clientData']['clientLevel'] . "</li>
         </ul>";
@@ -25,7 +25,7 @@ if ($_SESSION['clientData']['clientLevel'] > 1) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>PHP Motors</title>
+    <title>Order Form</title>
 </head>
 
 <body>

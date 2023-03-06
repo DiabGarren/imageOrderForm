@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>PHP Motors</title>
+    <title>Order Form</title>
 </head>
 
 <body>
@@ -28,12 +28,12 @@
                 echo $message;
             }
             ?>
-            <label for="clientFirstName">First Name</label>
+            <label for="clientFirstname">First Name</label>
             <input type="text" name="clientFirstname" id="clientFirstname" <?php if (isset($clientFirstname)) {
                                                                                 echo "value='$clientFirstname?'";
                                                                             } ?> required>
 
-            <label for="clientLastName">Last Name</label>
+            <label for="clientLastname">Last Name</label>
             <input type="text" name="clientLastname" id="clientLastname" <?php if (isset($clientLastname)) {
                                                                                 echo "value='$clientLastname?'";
                                                                             } ?> required>

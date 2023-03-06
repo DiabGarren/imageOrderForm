@@ -14,7 +14,7 @@
 <div>
     <?php
     if (isset($_SESSION['clientData'])) {
-        echo "<a href='/orderForm/accounts/'>Welcome " . $_SESSION['clientData']['clientFirstName'] . "</a>" .
+        echo "<a href='/orderForm/accounts/'>Welcome " . $_SESSION['clientData']['clientFirstname'] . "</a>" .
             "<a href='/orderForm/accounts/?action=logout'>Log out</a>";
     } else {
         echo "<a href='/orderForm/accounts/?action=login-view' id='my-account'>My Account</a>";
