@@ -45,25 +45,71 @@ function buildNav($classifications)
     return $navList;
 }
 
-function buildClassificationList($classifications)
+function displayOrderList($orders)
 {
-    $classificationList = '<select name="classificationId" id="classificationList">';
-    $classificationList .= "<option>Choose a Classification</option>";
-    foreach ($classifications as $classification) {
-        $classificationList .= "<option value='$classification[classificationId]'>$classification[classificationName]</option>";
+    $orderTable = '<thead>
+    <tr>
+    <th>Name</th>
+    <th>Print Images</th>
+    <th>Digital Images</th>
+    <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>';
+    foreach ($orders as $order) {
+        $total = 0;
+        $orderTable .= "<td>" . $order['orderFirstname'] . " " . $order['orderLastname'] . "</td>";
+
+        $orderTable .= "<td>" . $order['orderPrint'] . "</td>";
+        $orderTable .= "<td>" . $order['orderDigital'] . "</td>";
+
+        $printImages = explode(', ', $order['orderPrint']);
+        foreach ($printImages as $printImage) {
+            $total += 1;
+        }
+        $digitalImages = explode(', ', $order['orderDigital']);
+        foreach ($digitalImages as $digitalImage) {
+            $total += 1;
+        }
+        $orderTable .= "<td>$total</td></tr>";
     }
-    $classificationList .= '</select>';
-    return $classificationList;
+    $orderTable .= '</tbody>';
+    return $orderTable;
 }
 
-function getInventoryByClassification($classificationId)
+function displayOrderManager($orders)
 {
-    $db = orderFormConnect();
-    $sql = ' SELECT * FROM inventory WHERE classificationId = :classificationId';
-    $stmt = $db->prepare($sql);
-    $stmt->bindValue(':classificationId', $classificationId, PDO::PARAM_INT);
-    $stmt->execute();
-    $inventory = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    return $inventory;
+    $orderTable = '<thead>
+    <tr>
+    <th>Name</th>
+    <th>Print Images</th>
+    <th>Digital Images</th>
+    <th>Total</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>';
+    foreach ($orders as $order) {
+        $total = 0;
+        $printImages = explode(', ', $order['orderPrint']);
+        foreach ($printImages as $printImage) {
+            $total += 1;
+        }
+        $digitalImages = explode(', ', $order['orderDigital']);
+        foreach ($digitalImages as $digitalImage) {
+            $total += 1;
+        }
+
+        $orderTable .= "<td>" . $order['orderFirstname'] . " " . $order['orderLastname'] . "</td>
+        <td>" . $order['orderPrint'] . "</td>
+        <td>" . $order['orderDigital'] . "</td>
+        <td>$total</td>
+        <td><a href='/orderForm/orders/?action=mod&orderId=" . $order['orderId'] . "' title='Click to modify'>Modify</a></td>
+        <td><a href='/orderForm/orders/?action=del&orderId=" . $order['orderId'] . "' title='Click to delete'>Delete</a></td></tr>";
+    }
+    $orderTable .= '</tbody>';
+    return $orderTable;
 }

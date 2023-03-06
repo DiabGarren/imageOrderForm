@@ -69,7 +69,7 @@ function checkExistingEmail($clientEmail)
 function getClient($clientEmail)
 {
     $db = orderFormConnect();
-    $sql = 'SELECT clientId, clientFirstName, clientLastName, clientEmail, clientLevel, clientPassword
+    $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword
      FROM clients
      WHERE clientEmail = :clientEmail';
     $stmt = $db->prepare($sql);
