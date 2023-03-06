@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>PHP Motors</title>
+    <title>Orders | Order Form</title>
 </head>
 
 <body>
@@ -18,16 +18,18 @@
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/header.php' ?>
     </header>
     <nav>
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/navigation.php' ?>
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/navigation.php' ?>
     </nav>
     <main>
         <h1>Content Title Here</h1>
-        <table id="ordersDisplay"></table>
+        <a href="/orderForm/orders/?action=new">New order</a>
+        <table id="ordersDisplay">
+            <?php echo $orders; ?>
+        </table>
     </main>
     <footer>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/footer.php' ?>
     </footer>
-    <script src="../js/orders.js"></script>
 </body>
 
 </html>

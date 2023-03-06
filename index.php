@@ -17,11 +17,8 @@ if ($action == NULL) {
 }
 
 switch ($action) {
-    case 'template':
-        include 'view/template.php';
-        break;
-
     default:
+        $orders = displayOrderList(getOrders());
         include 'view/home.php';
         break;
 }

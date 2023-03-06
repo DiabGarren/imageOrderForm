@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>PHP Motors</title>
+    <title>Order Form</title>
 </head>
 
 <body>
@@ -22,6 +22,10 @@
     </nav>
     <main class="grid">
         <h1>Welcome to the Image Order Form!</h1>
+
+        <table id="ordersDisplay">
+            <?php echo $orders; ?>
+        </table>
     </main>
     <footer>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/footer.php' ?>
