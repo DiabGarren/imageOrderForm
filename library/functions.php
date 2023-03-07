@@ -50,8 +50,8 @@ function displayOrderList($orders)
     $orderTable = '<thead>
     <tr>
     <th>Name</th>
-    <th>Print Images</th>
-    <th>Digital Images</th>
+    <th>Print</th>
+    <th>Digital</th>
     <th>Total</th>
     </tr>
     </thead>
@@ -73,9 +73,8 @@ function displayOrderManager($orders)
     $orderTable = '<thead>
     <tr>
     <th>Name</th>
-    <th>Print Images</th>
-    <th>Digital Images</th>
-    <th>Total</th>
+    <th>Print</th>
+    <th>Digital</th>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     </tr>
@@ -86,7 +85,6 @@ function displayOrderManager($orders)
         $orderTable .= "<td>" . $order['orderFirstname'] . " " . $order['orderLastname'] . "</td>
         <td>" . $order['orderPrint'] . "</td>
         <td>" . $order['orderDigital'] . "</td>
-        <td>" . $order['orderAmount'] . "</td>
         <td><a href='/orderForm/orders/?action=mod&orderId=" . $order['orderId'] . "' title='Click to modify'>Modify</a></td>
         <td><a href='/orderForm/orders/?action=del&orderId=" . $order['orderId'] . "' title='Click to delete'>Delete</a></td></tr>";
     }

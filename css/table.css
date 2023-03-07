@@ -1,0 +1,92 @@
+table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+table td {
+    font-size: 13px;
+    padding: .5rem;
+    border: 1px solid black;
+}
+
+table tr:nth-child(2n-1) {
+    background: var(--sub-nav);
+    color: white;
+}
+
+table tr:nth-child(2n) {
+    background: var(--nav);
+    color: white;
+}
+
+table tr:nth-child(1) td {
+    border-top: 2px solid black;
+}
+
+table tr:last-child td {
+    border-bottom: 2px solid black;
+}
+
+table thead td {
+    border: none !important;
+    background: var(--sub-nav);
+}
+
+table td a {
+    display: block;
+    height: 100%;
+    padding: 1.05rem 0;
+    text-align: center;
+    color: white;
+}
+
+table tr:nth-child(2n-1) td a {
+    background: var(--button-color);
+}
+
+table tr:nth-child(2n-1) td a:hover,
+table tr:nth-child(2n) td a:hover {
+    background: var(--button-hover);
+    color: var(--nav);
+}
+
+table tr:nth-child(2n) td a {
+    background: var(--nav-hover);
+}
+
+table.management td:nth-last-child(2),
+table.management td:nth-last-child(1) {
+    padding: 0;
+}
+
+.new-order-btn {
+    display: block;
+    font-size: 1.2rem;
+    background-color: var(--button-color);
+    color: white;
+    width: fit-content;
+    border-radius: 10px;
+    padding: .5rem;
+    margin: .5rem 1%;
+}
+
+.new-order-btn:hover {
+    background-color: var(--button-hover);
+    color: var(--sub-nav);
+    transform: scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+    table {
+        width: 98%;
+    }
+
+    table td {
+        font-size: 16px;
+    }
+
+
+    table td a {
+        padding: .5rem;
+    }
+}

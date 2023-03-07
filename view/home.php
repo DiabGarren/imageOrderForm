@@ -20,10 +20,10 @@
     <nav>
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/navigation.php' ?>
     </nav>
-    <main class="grid">
+    <main>
         <h1>Welcome to the Image Order Form!</h1>
 
-        <table id="ordersDisplay">
+        <table id="ordersDisplay" cellspacing="0">
             <?php echo $orders; ?>
         </table>
     </main>

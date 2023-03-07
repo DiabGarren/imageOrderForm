@@ -22,8 +22,8 @@
     </nav>
     <main>
         <h1>Order Management</h1>
-        <a href="/orderForm/orders/?action=new">New order</a>
-        <table id="ordersDisplay">
+        <a class="new-order-btn" href="/orderForm/orders/?action=new">New order</a>
+        <table id="ordersDisplay" class="management" cellspacing="0">
             <?php echo $orders; ?>
         </table>
     </main>
