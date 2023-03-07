@@ -58,21 +58,11 @@ function displayOrderList($orders)
     <tbody>
     <tr>';
     foreach ($orders as $order) {
-        $total = 0;
         $orderTable .= "<td>" . $order['orderFirstname'] . " " . $order['orderLastname'] . "</td>";
 
         $orderTable .= "<td>" . $order['orderPrint'] . "</td>";
         $orderTable .= "<td>" . $order['orderDigital'] . "</td>";
-
-        $printImages = explode(', ', $order['orderPrint']);
-        foreach ($printImages as $printImage) {
-            $total += 1;
-        }
-        $digitalImages = explode(', ', $order['orderDigital']);
-        foreach ($digitalImages as $digitalImage) {
-            $total += 1;
-        }
-        $orderTable .= "<td>$total</td></tr>";
+        $orderTable .= "<td>" . $order['orderAmount'] . "</td></tr>";
     }
     $orderTable .= '</tbody>';
     return $orderTable;
@@ -93,20 +83,10 @@ function displayOrderManager($orders)
     <tbody>
     <tr>';
     foreach ($orders as $order) {
-        $total = 0;
-        $printImages = explode(', ', $order['orderPrint']);
-        foreach ($printImages as $printImage) {
-            $total += 1;
-        }
-        $digitalImages = explode(', ', $order['orderDigital']);
-        foreach ($digitalImages as $digitalImage) {
-            $total += 1;
-        }
-
         $orderTable .= "<td>" . $order['orderFirstname'] . " " . $order['orderLastname'] . "</td>
         <td>" . $order['orderPrint'] . "</td>
         <td>" . $order['orderDigital'] . "</td>
-        <td>$total</td>
+        <td>" . $order['orderAmount'] . "</td>
         <td><a href='/orderForm/orders/?action=mod&orderId=" . $order['orderId'] . "' title='Click to modify'>Modify</a></td>
         <td><a href='/orderForm/orders/?action=del&orderId=" . $order['orderId'] . "' title='Click to delete'>Delete</a></td></tr>";
     }

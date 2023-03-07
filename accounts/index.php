@@ -129,7 +129,7 @@ switch ($action) {
         // Store the array into the session
         $_SESSION['clientData'] = $clientData;
         // Send them to the admin view
-        include '../view/admin.php';
+        header('Location: /orderForm/orders/');
         exit;
         break;
 
@@ -140,6 +140,6 @@ switch ($action) {
         break;
 
     default:
-        include '../view/admin.php';
+        header('Location: /orderForm/orders/');
         break;
 }

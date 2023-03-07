@@ -64,13 +64,13 @@
                                                                                     ?></textarea>
                 <label for="orderAmount">Amount Due</label>
                 <input type="text" name="orderAmount" id="orderAmount" required readonly <?php
-                                                                                            echo 'value="R' . $order['orderAmount'] . '"';
+                                                                                            echo 'value="' . $order['orderAmount'] . '"';
                                                                                             ?>>
 
                 <input type="submit" name="submit" class="form-button" id="delete-order" value="Delete Order">
 
                 <input type="hidden" name="action" value="delete-order">
-                <input type="hidden" name="OrderId" value="
+                <input type="hidden" name="orderId" value="
             <?php
             echo $orderId;
             ?>

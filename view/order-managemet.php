@@ -21,7 +21,7 @@
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/orderForm/snippets/navigation.php' ?>
     </nav>
     <main>
-        <h1>Content Title Here</h1>
+        <h1>Order Management</h1>
         <a href="/orderForm/orders/?action=new">New order</a>
         <table id="ordersDisplay">
             <?php echo $orders; ?>

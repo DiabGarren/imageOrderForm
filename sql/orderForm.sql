@@ -33,7 +33,7 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 INSERT INTO `orders` (`orderId`, `orderFirstname`, `orderLastname`, `orderPhone`, `orderPrint`, `orderDigital`, `orderAmount`) 
-VALUES (1, 'Garren', 'Diab', '0609811694', 'IMG_001,IMG_002', '', 20);
+VALUES (1, 'Garren', 'Diab', '0609811694', 'IMG_0001, IMG_0002', 'IMG_0003, IMG_0004', 40);
 --
 -- Indexes for table `inventory`
 --
