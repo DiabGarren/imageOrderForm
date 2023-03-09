@@ -45,10 +45,10 @@
                                                                                     } ?>>
 
             <label for="orderPrint">Images to Print</label>
-            <textarea name="orderPrint" id="orderPrint" required><?php if (isset($orderPrint)) {echo $orderPrint;} ?></textarea>
+            <textarea name="orderPrint" id="orderPrint"><?php if (isset($orderPrint)) {echo $orderPrint;} ?></textarea>
 
             <label for="orderDigital">Digital only Images</label>
-            <textarea name="orderDigital" id="orderDigital" required><?php if (isset($orderPrint)) {echo $orderPrint;} ?></textarea>
+            <textarea name="orderDigital" id="orderDigital"><?php if (isset($orderPrint)) {echo $orderPrint;} ?></textarea>
 
             <label for="orderAmount">Amount Due</label>
             <input type="text" name="orderAmount" id="orderAmount" required readonly  required <?php if (isset($orderAmount)) {

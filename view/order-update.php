@@ -54,11 +54,11 @@
             }
             ?>
             <label for="orderPrint">Images to Print</label>
-            <textarea name="orderPrint" id="orderPrint" required><?php
+            <textarea name="orderPrint" id="orderPrint" ><?php
                                                                     echo $print;
                                                                     ?></textarea>
             <label for="orderDigital">Digital only Images</label>
-            <textarea name="orderDigital" id="orderDigital" required><?php
+            <textarea name="orderDigital" id="orderDigital"><?php
                                                                         echo $digital;
                                                                         ?></textarea>
             <label for="orderAmount">Amount Due</label>

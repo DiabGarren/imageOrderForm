@@ -33,7 +33,7 @@ switch ($action) {
         $orderPaid = filter_input(INPUT_POST, 'orderChange', FILTER_SANITIZE_NUMBER_INT);
         $orderChange = filter_input(INPUT_POST, 'orderChange', FILTER_SANITIZE_NUMBER_INT);
 
-        if (empty($orderFirstname) || empty($orderLastname) || empty($orderPhone) || empty($orderPrint) || empty($orderDigital) || empty($orderAmount)) {
+        if (empty($orderFirstname) || empty($orderLastname) || empty($orderPhone) || empty($orderAmount)) {
             $message = "<p class='form-warning red'>Please fill out all the fields.</p>";
             include '../view/order-new.php';
             exit;
@@ -72,7 +72,7 @@ switch ($action) {
 
         $order = getOrderById($orderId);
 
-        if (empty($orderFirstname) || empty($orderLastname) || empty($orderPhone) || empty($orderPrint) || empty($orderDigital) || empty($orderAmount)) {
+        if (empty($orderFirstname) || empty($orderLastname) || empty($orderPhone) || empty($orderAmount)) {
             $message = "<p class='form-warning red'>Please fill out all the fields.</p>";
             include '../view/order-update.php';
             exit;
